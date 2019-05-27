@@ -69,16 +69,18 @@ namespace BookShopArray
         private void ShowButton_Click(object sender, EventArgs e)
         {
             string message = "";
-            for (int index = 0; index < name.Count; index++)
+            //for (int index = 0; index < name.Count; index++)
+            int index = 0;
+            foreach(string each_name in name)
             {
                 message += "Customer No: " + (index + 1);
-                message += "\nName: " + name[index];
+                message += "\nName: " + each_name;
                 message += "\nContact No. : " + contactNo[index];
                 message += "\nAddress: " + address[index];
                 message += "\nOrder: " + order[index];
                 message += "\nQuantity : " + Convert.ToString(quantity[index]);
                 message += "\nTotal Price : " + Convert.ToString(totalPrice[index]);
-
+                index++;
             }
             showRichTextBox.Text = message;
         }
