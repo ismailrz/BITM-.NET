@@ -17,7 +17,8 @@ namespace MyWinApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new PersonalInformationForm());
-            Application.Run(new Calculator());
+            //Application.Run(new Calculator());
+            Application.Run(new StoreArray());
         }
     }
 }
