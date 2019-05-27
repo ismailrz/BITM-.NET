@@ -12,14 +12,13 @@ namespace BookShopArray
 {
     public partial class BookShopForm : Form
     {
-        const int size = 10;
-        int count = 0;
-        string[] name = new string[size];
-        string[] contactNo = new string[size];
-        string[] address = new string[size];
-        string[] order = new string[size];
-        int[] quantity = new int[size];
-        int[] totalPrice = new int[size];
+        List<string> name = new List<string>();
+        List<string> contactNo = new List<string>();
+        List<string> address = new List<string>();
+        List<string> order = new List<string>();
+        List<int> quantity = new List<int>();
+        List<int> totalPrice = new List<int>();
+
         int tempTotalPrice;
 
 
@@ -30,16 +29,15 @@ namespace BookShopArray
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            name[count] = nameTextBox.Text;
-            contactNo[count] = contactTextBox.Text;
-            address[count] = addressTextBox.Text;
-            order[count] = orderComboBox.Text;
-            quantity[count] =Convert.ToInt32( quantityTextBox.Text);
-            totalPrice[count] = tempTotalPrice;
-            count++;
+            name.Add(nameTextBox.Text);
+            contactNo.Add(contactTextBox.Text);
+            address.Add(addressTextBox.Text);
+            order.Add(orderComboBox.Text);
+            quantity.Add(Convert.ToInt32(quantityTextBox.Text));
+            totalPrice.Add(tempTotalPrice);
 
             string message = "";
-            for(int index=0;index<count;index++)
+            for(int index=0;index<name.Count;index++)
             {
                 message += "Customer No: " + (index + 1);
                 message += "\nName: " + name[index];
@@ -79,5 +77,7 @@ namespace BookShopArray
             totalPriceextBox.Text = Convert.ToString(tempTotalPrice);
 
         }
+
+       
     }
 }

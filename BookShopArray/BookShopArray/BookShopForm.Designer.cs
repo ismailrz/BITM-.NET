@@ -50,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 40);
+            this.label1.Location = new System.Drawing.Point(52, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 24);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 305);
+            this.label2.Location = new System.Drawing.Point(52, 298);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 265);
+            this.label3.Location = new System.Drawing.Point(52, 258);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 2;
@@ -104,7 +104,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(52, 226);
+            this.label7.Location = new System.Drawing.Point(53, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 7;
@@ -119,14 +119,14 @@
             // 
             // totalPriceextBox
             // 
-            this.totalPriceextBox.Location = new System.Drawing.Point(161, 305);
+            this.totalPriceextBox.Location = new System.Drawing.Point(161, 298);
             this.totalPriceextBox.Name = "totalPriceextBox";
             this.totalPriceextBox.Size = new System.Drawing.Size(199, 20);
             this.totalPriceextBox.TabIndex = 9;
             // 
             // quantityTextBox
             // 
-            this.quantityTextBox.Location = new System.Drawing.Point(161, 265);
+            this.quantityTextBox.Location = new System.Drawing.Point(161, 258);
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(199, 20);
             this.quantityTextBox.TabIndex = 10;
@@ -153,14 +153,14 @@
             "English",
             "Math",
             "Art"});
-            this.orderComboBox.Location = new System.Drawing.Point(161, 226);
+            this.orderComboBox.Location = new System.Drawing.Point(161, 217);
             this.orderComboBox.Name = "orderComboBox";
             this.orderComboBox.Size = new System.Drawing.Size(120, 21);
             this.orderComboBox.TabIndex = 13;
             // 
             // CalculateButton
             // 
-            this.CalculateButton.Location = new System.Drawing.Point(161, 352);
+            this.CalculateButton.Location = new System.Drawing.Point(161, 385);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(75, 23);
             this.CalculateButton.TabIndex = 14;
@@ -170,7 +170,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(285, 352);
+            this.SubmitButton.Location = new System.Drawing.Point(285, 385);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 15;
@@ -190,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(844, 450);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.CalculateButton);
@@ -232,7 +232,6 @@
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.RichTextBox showRichTextBox;
-        
     }
 }
 
