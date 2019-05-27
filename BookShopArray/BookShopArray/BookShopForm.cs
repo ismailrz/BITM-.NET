@@ -35,20 +35,7 @@ namespace BookShopArray
             order.Add(orderComboBox.Text);
             quantity.Add(Convert.ToInt32(quantityTextBox.Text));
             totalPrice.Add(tempTotalPrice);
-
-            string message = "";
-            for(int index=0;index<name.Count;index++)
-            {
-                message += "Customer No: " + (index + 1);
-                message += "\nName: " + name[index];
-                message += "\nContact No. : " + contactNo[index];
-                message += "\nAddress: " + address[index];
-                message += "\nOrder: " + order[index];
-                message += "\nQuantity : " + Convert.ToString(quantity[index]);
-                message += "\nTotal Price : " + Convert.ToString(totalPrice[index]);
-
-            }
-            showRichTextBox.Text = message;
+            displayTextBox.Text = "Information has been submitted";
 
         }
 
@@ -75,9 +62,25 @@ namespace BookShopArray
             tempTotalPrice = price * Convert.ToInt32(quantityTextBox.Text);
 
             totalPriceextBox.Text = Convert.ToString(tempTotalPrice);
+            displayTextBox.Text = "Total Price is Calculated";
 
         }
 
-       
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
+            string message = "";
+            for (int index = 0; index < name.Count; index++)
+            {
+                message += "Customer No: " + (index + 1);
+                message += "\nName: " + name[index];
+                message += "\nContact No. : " + contactNo[index];
+                message += "\nAddress: " + address[index];
+                message += "\nOrder: " + order[index];
+                message += "\nQuantity : " + Convert.ToString(quantity[index]);
+                message += "\nTotal Price : " + Convert.ToString(totalPrice[index]);
+
+            }
+            showRichTextBox.Text = message;
+        }
     }
 }

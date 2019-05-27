@@ -44,6 +44,8 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.displayTextBox = new System.Windows.Forms.TextBox();
+            this.ShowButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -182,15 +184,34 @@
             // 
             this.showRichTextBox.Location = new System.Drawing.Point(498, 83);
             this.showRichTextBox.Name = "showRichTextBox";
-            this.showRichTextBox.Size = new System.Drawing.Size(192, 242);
+            this.showRichTextBox.Size = new System.Drawing.Size(192, 282);
             this.showRichTextBox.TabIndex = 16;
             this.showRichTextBox.Text = "";
+            // 
+            // displayTextBox
+            // 
+            this.displayTextBox.Location = new System.Drawing.Point(161, 345);
+            this.displayTextBox.Name = "displayTextBox";
+            this.displayTextBox.Size = new System.Drawing.Size(199, 20);
+            this.displayTextBox.TabIndex = 17;
+            // 
+            // ShowButton
+            // 
+            this.ShowButton.Location = new System.Drawing.Point(498, 385);
+            this.ShowButton.Name = "ShowButton";
+            this.ShowButton.Size = new System.Drawing.Size(75, 23);
+            this.ShowButton.TabIndex = 18;
+            this.ShowButton.Text = "Show";
+            this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
             // BookShopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 450);
+            this.Controls.Add(this.ShowButton);
+            this.Controls.Add(this.displayTextBox);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.CalculateButton);
@@ -232,6 +253,8 @@
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.RichTextBox showRichTextBox;
+        private System.Windows.Forms.TextBox displayTextBox;
+        private System.Windows.Forms.Button ShowButton;
     }
 }
 
