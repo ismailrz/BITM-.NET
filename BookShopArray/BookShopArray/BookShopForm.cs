@@ -69,7 +69,6 @@ namespace BookShopArray
         private void ShowButton_Click(object sender, EventArgs e)
         {
             string message = "";
-            //for (int index = 0; index < name.Count; index++)
             int index = 0;
             foreach(string each_name in name)
             {
