@@ -32,7 +32,12 @@ namespace MyWinApp
                 userLabel.Text = "";
                 user = userTextBox.Text;
 
-                if(UserExists(user))
+                if (String.IsNullOrEmpty(user))
+                {
+                    MessageBox.Show("User field can not be empty");
+                    return;               
+                } 
+                if (UserExists(user))
                 {
                     userLabel.Text = "User: " + user + " is already exist!";
                     return;
