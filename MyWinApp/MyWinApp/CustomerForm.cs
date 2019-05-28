@@ -31,6 +31,12 @@ namespace MyWinApp
 
                 user = userTextBox.Text;
                 name = nameTextBox.Text;
+
+                if(String.IsNullOrEmpty(ageTextBox.Text))
+                {
+                    MessageBox.Show("Age field can not be empty");
+                    return ;               //Exit from the method if error happens, next not repeat error
+                }
                 age = Convert.ToInt32(ageTextBox.Text);   //if age is null or character, then program terminate
                                                            // so use try-catch .
                 users.Add(user);
