@@ -50,8 +50,16 @@ namespace MyWinApp
                     MessageBox.Show("Age field can not be empty");
                     return ;               //Exit from the method if error happens, next not repeat error
                 }
+
+                if (System.Text.RegularExpressions.Regex.IsMatch(ageTextBox.Text, "[^0-9]"))  // built-in method online search. 
+                {
+                    MessageBox.Show("Please enter only numbers.");
+                    return;
+                }
+
                 age = Convert.ToInt32(ageTextBox.Text);   //if age is null or character, then program terminate
-                                                           // so use try-catch .
+                                                          // so use try-catch .
+
                 users.Add(user);
                 names.Add(name);
                 ages.Add(age);
