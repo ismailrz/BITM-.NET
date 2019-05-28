@@ -29,7 +29,15 @@ namespace MyWinApp
                 string name;
                 int age;
 
+                userLabel.Text = "";
                 user = userTextBox.Text;
+
+                if(UserExists(user))
+                {
+                    userLabel.Text = "User: " + user + " is already exist!";
+                    return;
+                }
+
                 name = nameTextBox.Text;
 
                 if(String.IsNullOrEmpty(ageTextBox.Text))
@@ -61,6 +69,18 @@ namespace MyWinApp
                 message += (index + 1) + "\t" + users[index] + "\t" + names[index] + "\t" + ages[index] + "\n";
             }
             return message;
+        }
+        private bool UserExists(string user)     //user checking method            
+        {
+            bool isExist = false;
+            foreach(string checkUser in users)
+            {
+                if(checkUser==user)
+                {
+                    isExist = true;
+                }
+            }
+            return isExist;
         }
     }
 }

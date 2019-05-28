@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.userLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // userTextBox
@@ -104,11 +105,20 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // userLabel
+            // 
+            this.userLabel.AutoSize = true;
+            this.userLabel.Location = new System.Drawing.Point(514, 70);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(0, 13);
+            this.userLabel.TabIndex = 8;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.userLabel);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.label3);
@@ -134,5 +144,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox showRichTextBox;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Label userLabel;
     }
 }
