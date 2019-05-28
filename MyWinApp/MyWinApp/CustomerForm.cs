@@ -23,19 +23,28 @@ namespace MyWinApp
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            string user;
-            string name;
-            int age;
+            try
+            {
+                string user;
+                string name;
+                int age;
 
-            user = userTextBox.Text;
-            name = nameTextBox.Text;
-            age =Convert.ToInt32(ageTextBox.Text);
+                user = userTextBox.Text;
+                name = nameTextBox.Text;
+                age = Convert.ToInt32(ageTextBox.Text);   //if age is null or character, then program terminate
+                                                           // so use try-catch .
+                users.Add(user);
+                names.Add(name);
+                ages.Add(age);
 
-            users.Add(user);
-            names.Add(name);
-            ages.Add(age);
+                showRichTextBox.Text = Display();
 
-            showRichTextBox.Text = Display();
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+            
         }
         private string Display()
         {
